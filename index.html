@@ -15,6 +15,8 @@
         body {
             font-family: 'Zen Maru Gothic', sans-serif; /* 全体を丸ゴシックに変更 */
             color: #4a4a4a; /* 少し柔らかい黒 */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         /* 見出しやアクセント用のフォント */
         .font-accent {
@@ -59,52 +61,52 @@
     <!-- メインコンテンツ -->
     <main>
         <!-- メインビジュアル -->
-        <section class="relative h-[60vh] md:h-[80vh] bg-cover bg-center" style="background-image: url('https://placehold.co/1600x900/d1c4b3/4a4a4a?text=Craftsman');">
+        <section class="relative h-[60vh] md:h-[75vh] bg-cover bg-center" style="background-image: url('https://placehold.co/1600x900/d1c4b3/4a4a4a?text=Craftsman');">
             <div class="absolute inset-0 bg-black bg-opacity-30"></div>
             <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
-                <h2 class="text-3xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-4 font-accent">手から生まれる、温かい時間。</h2>
-                <p class="text-lg md:text-xl max-w-2xl">閑人房は、宇野修平が手がける<br class="hidden sm:block">革しごとと土あそびの小さなアトリエです。</p>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-4 font-accent">手から生まれる、温かい時間。</h2>
+                <p class="text-base sm:text-lg md:text-xl max-w-2xl">閑人房は、宇野修平が手がける<br class="hidden sm:block">革しごとと土あそびの小さなアトリエです。</p>
             </div>
         </section>
 
         <!-- 閑人房について -->
-        <section id="about" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-6 md:px-12">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
+        <section id="about" class="py-12 md:py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 md:px-12">
+                <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                     <div class="order-2 md:order-1">
-                        <h3 class="text-3xl font-bold mb-4 text-amber-900 font-accent">閑人房について</h3>
-                        <p class="text-lg mb-4 leading-relaxed">
+                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-amber-900 font-accent">閑人房について</h3>
+                        <p class="text-base sm:text-lg mb-4 leading-relaxed">
                             オーナーの宇野修平、75歳。<br>
                             長年の勤めを終え、第二の人生で出会ったのが、ものづくりの世界でした。
                         </p>
-                        <p class="mb-4 leading-relaxed">
+                        <p class="text-base sm:text-lg mb-4 leading-relaxed">
                             若い頃から好きだった革の匂い、土の感触。時間を忘れ、ただ黙々と手と向き合う。そんな「閑（ひま）な人」の時間を楽しむ房（へや）が、この「閑人房」です。
                         </p>
-                        <p class="leading-relaxed">
+                        <p class="text-base sm:text-lg leading-relaxed">
                             ひとつひとつ、ゆっくりと。使う人の日々にそっと寄り添うような、温かみのある作品をお届けできれば幸いです。
                         </p>
                     </div>
                     <div class="order-1 md:order-2">
-                        <img src="https://placehold.co/600x700/e0e0e0/4a4a4a?text=宇野修平" alt="オーナーの宇野修平" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                        <img src="https://placehold.co/600x700/e0e0e0/4a4a4a?text=宇野修平" alt="オーナーの宇野修平" class="rounded-lg shadow-xl w-full h-auto object-cover max-h-[70vh]">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- 作品紹介 -->
-        <section id="works" class="py-16 md:py-24">
-            <div class="container mx-auto px-6 md:px-12">
+        <section id="works" class="py-12 md:py-20">
+            <div class="container mx-auto px-4 sm:px-6 md:px-12">
                 <div class="text-center mb-12">
-                    <h3 class="text-4xl font-bold text-amber-900 font-accent">作品紹介</h3>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-amber-900 font-accent">作品紹介</h3>
                 </div>
 
                 <!-- 革しごと -->
                 <div class="mb-16">
-                    <h4 class="text-3xl font-semibold text-center mb-8 font-accent border-b-2 border-amber-800 pb-2 w-fit mx-auto">革しごと</h4>
+                    <h4 class="text-2xl sm:text-3xl font-semibold text-center mb-8 font-accent border-b-2 border-amber-800 pb-2 w-fit mx-auto">革しごと</h4>
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- 作品カード 1 -->
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="https://placehold.co/600x400/8d6e63/ffffff?text=レザーバッグ" alt="レザーバッグの画像" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/8d6e63/ffffff?text=レザーバッグ" alt="レザーバッグの画像" class="w-full h-56 sm:h-64 object-cover group-hover:scale-105 transition-transform duration-300">
                             <div class="p-6">
                                 <h5 class="text-xl font-bold mb-2">トートバッグ</h5>
                                 <p class="text-gray-600">使い込むほどに味が出る、厚手のヌメ革を使用。A4サイズもすっぽり収まります。</p>
@@ -112,7 +114,7 @@
                         </div>
                         <!-- 作品カード 2 -->
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="https://placehold.co/600x400/a1887f/ffffff?text=革財布" alt="革財布の画像" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/a1887f/ffffff?text=革財布" alt="革財布の画像" class="w-full h-56 sm:h-64 object-cover group-hover:scale-105 transition-transform duration-300">
                             <div class="p-6">
                                 <h5 class="text-xl font-bold mb-2">長財布</h5>
                                 <p class="text-gray-600">手縫いで仕上げたステッチが特徴。シンプルながらも収納力は抜群です。</p>
@@ -120,7 +122,7 @@
                         </div>
                         <!-- 作品カード 3 -->
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="https://placehold.co/600x400/bcaaa4/ffffff?text=ブックカバー" alt="ブックカバーの画像" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/bcaaa4/ffffff?text=ブックカバー" alt="ブックカバーの画像" class="w-full h-56 sm:h-64 object-cover group-hover:scale-105 transition-transform duration-300">
                             <div class="p-6">
                                 <h5 class="text-xl font-bold mb-2">ブックカバー</h5>
                                 <p class="text-gray-600">読書の時間を豊かにする一品。文庫本サイズで、栞も付いています。</p>
@@ -131,11 +133,11 @@
 
                 <!-- 土あそび -->
                 <div>
-                    <h4 class="text-3xl font-semibold text-center mb-8 font-accent border-b-2 border-amber-800 pb-2 w-fit mx-auto">土あそび</h4>
+                    <h4 class="text-2xl sm:text-3xl font-semibold text-center mb-8 font-accent border-b-2 border-amber-800 pb-2 w-fit mx-auto">土あそび</h4>
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- 作品カード 4 -->
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="https://placehold.co/600x400/c5e1a5/4a4a4a?text=マグカップ" alt="陶芸のマグカップの画像" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/c5e1a5/4a4a4a?text=マグカップ" alt="陶芸のマグカップの画像" class="w-full h-56 sm:h-64 object-cover group-hover:scale-105 transition-transform duration-300">
                             <div class="p-6">
                                 <h5 class="text-xl font-bold mb-2">マグカップ</h5>
                                 <p class="text-gray-600">手にしっくりと馴染む形。温かい緑釉が、飲み物の色を引き立てます。</p>
@@ -143,7 +145,7 @@
                         </div>
                         <!-- 作品カード 5 -->
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="https://placehold.co/600x400/e6ee9c/4a4a4a?text=小皿" alt="陶芸の小皿の画像" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/e6ee9c/4a4a4a?text=小皿" alt="陶芸の小皿の画像" class="w-full h-56 sm:h-64 object-cover group-hover:scale-105 transition-transform duration-300">
                             <div class="p-6">
                                 <h5 class="text-xl font-bold mb-2">小皿</h5>
                                 <p class="text-gray-600">食卓を彩る小さな一枚。お菓子をのせたり、小物入れにしたり。</p>
@@ -151,7 +153,7 @@
                         </div>
                         <!-- 作品カード 6 -->
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="https://placehold.co/600x400/fff59d/4a4a4a?text=一輪挿し" alt="陶芸の一輪挿しの画像" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/fff59d/4a4a4a?text=一輪挿し" alt="陶芸の一輪挿しの画像" class="w-full h-56 sm:h-64 object-cover group-hover:scale-105 transition-transform duration-300">
                             <div class="p-6">
                                 <h5 class="text-xl font-bold mb-2">一輪挿し</h5>
                                 <p class="text-gray-600">野の花が似合う、素朴な佇まい。窓辺にそっと置きたくなります。</p>
@@ -163,19 +165,19 @@
         </section>
 
         <!-- お知らせ -->
-        <section id="info" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-6 md:px-12 max-w-3xl">
+        <section id="info" class="py-12 md:py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 md:px-12 max-w-3xl">
                 <div class="text-center mb-12">
-                    <h3 class="text-4xl font-bold text-amber-900 font-accent">お知らせ</h3>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-amber-900 font-accent">お知らせ</h3>
                 </div>
                 <div class="space-y-6">
                     <div class="border-b pb-4">
-                        <p class="text-lg font-semibold">2025.05.10</p>
-                        <p>Webサイトを公開しました。これから日々のこと、作品のことを綴っていきます。</p>
+                        <p class="text-base sm:text-lg font-semibold">2025.05.10</p>
+                        <p class="text-base">Webサイトを公開しました。これから日々のこと、作品のことを綴っていきます。</p>
                     </div>
                     <div class="border-b pb-4">
-                        <p class="text-lg font-semibold">2025.04.15</p>
-                        <p>地元のギャラリーで開催されるグループ展に参加します。詳細はまた後日お知らせいたします。</p>
+                        <p class="text-base sm:text-lg font-semibold">2025.04.15</p>
+                        <p class="text-base">地元のギャラリーで開催されるグループ展に参加します。詳細はまた後日お知らせいたします。</p>
                     </div>
                 </div>
             </div>
@@ -209,5 +211,6 @@
     </script>
 </body>
 </html>
+
 
 
