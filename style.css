@@ -22,3 +22,80 @@ header {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
+
+/* 画像をクリック可能に見せる */
+.gallery-image {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+.gallery-image:hover {
+    opacity: 0.8;
+}
+
+/* 画像拡大表示用のモーダル（Lightbox） */
+.image-modal {
+    display: none; /* 初期状態では非表示 */
+    position: fixed; /* 画面に固定 */
+    z-index: 1000; /* 最前面に表示 */
+    padding: 20px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* 背景を黒く半透明に */
+    /* ↓↓↓ flexを使って中央揃え */
+    justify-content: center;
+    align-items: center;
+}
+
+/* ↓↓↓ ここから下を変更・追加 ↓↓↓ */
+
+/* 画像とキャプションのコンテナ */
+.modal-image-container {
+    position: relative; /* キャプションを絶対配置するための基準 */
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    max-height: 90vh;
+}
+
+.image-modal-content {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 90vh;
+}
+
+.modal-close-button {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001; /* コンテナより手前に表示 */
+}
+.modal-close-button:hover {
+    color: #bbb;
+}
+
+/* 拡大画像のキャプション（コメント）用のスタイル */
+#modalCaption {
+    position: absolute; /* コンテナを基準に絶対配置 */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明の黒い背景 */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    box-sizing: border-box; /* paddingを含めて幅を100%に */
+}
+
