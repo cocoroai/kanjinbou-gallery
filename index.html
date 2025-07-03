@@ -4,32 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>閑人房 | 宇野修平 作品集</title>
-    <!-- Tailwind CSSの読み込み -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fontsの読み込み -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- 外部CSSファイルの読み込み -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-50">
 
-    <!-- ヘッダー -->
     <header class="sticky top-0 z-50 w-full">
         <div class="container mx-auto flex justify-between items-center p-4">
-            <h1 class="text-2xl font-bold font-accent text-amber-800">閑人房</h1>
+            <a href="#" class="flex items-center space-x-3">
+                <img src="images/logo.png" alt="閑人房ロゴ" class="logo-header">
+                <span class="text-2xl font-bold font-accent text-amber-800">閑人房</span>
+            </a>
             <nav class="hidden md:flex space-x-8 text-lg">
                 <a href="#about" class="hover:text-amber-700 transition">閑人房について</a>
                 <a href="#works" class="hover:text-amber-700 transition">作品紹介</a>
                 <a href="#info" class="hover:text-amber-700 transition">お知らせ</a>
             </nav>
-            <!-- モバイル用メニューボタン -->
             <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-800">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </div>
-        <!-- モバイル用ナビゲーション -->
         <div id="mobile-menu" class="hidden md:hidden">
             <a href="#about" class="block py-2 px-4 text-sm hover:bg-amber-50">閑人房について</a>
             <a href="#works" class="block py-2 px-4 text-sm hover:bg-amber-50">作品紹介</a>
@@ -37,9 +34,7 @@
         </div>
     </header>
 
-    <!-- メインコンテンツ -->
     <main>
-        <!-- メインビジュアル -->
         <section class="relative h-[60vh] md:h-[75vh] bg-cover bg-center" style="background-image: url('images/main-visual.jpg');">
             <div class="absolute inset-0 bg-black bg-opacity-30"></div>
             <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
@@ -48,14 +43,13 @@
             </div>
         </section>
 
-        <!-- 閑人房について -->
         <section id="about" class="py-12 md:py-20 bg-white">
             <div class="container mx-auto px-4 sm:px-6 md:px-12">
                 <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                     <div class="order-2 md:order-1">
                         <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-amber-900 font-accent">閑人房について</h3>
                         <p class="text-base sm:text-lg mb-4 leading-relaxed">
-                            オーナーの宇野修平、75歳。<br>
+                            オーナーの宇野修平。<br>
                             長年の勤めを終え、第二の人生で出会ったのが、ものづくりの世界でした。
                         </p>
                         <p class="text-base sm:text-lg mb-4 leading-relaxed">
@@ -72,14 +66,12 @@
             </div>
         </section>
 
-        <!-- 作品紹介 -->
         <section id="works" class="py-12 md:py-20">
             <div class="container mx-auto px-4 sm:px-6 md:px-12">
                 <div class="text-center mb-12">
                     <h3 class="text-3xl sm:text-4xl font-bold text-amber-900 font-accent">作品紹介</h3>
                 </div>
 
-                <!-- 革しごと -->
                 <div class="mb-16">
                     <h4 class="text-2xl sm:text-3xl font-semibold text-center mb-8 font-accent border-b-2 border-amber-800 pb-2 w-fit mx-auto">革しごと</h4>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -126,7 +118,6 @@
                     </div>
                 </div>
 
-                <!-- 土あそび -->
                 <div>
                     <h4 class="text-2xl sm:text-3xl font-semibold text-center mb-8 font-accent border-b-2 border-amber-800 pb-2 w-fit mx-auto">土あそび</h4>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -151,7 +142,6 @@
             </div>
         </section>
 
-        <!-- お知らせ -->
         <section id="info" class="py-12 md:py-20 bg-white">
             <div class="container mx-auto px-4 sm:px-6 md:px-12 max-w-3xl">
                 <div class="text-center mb-12">
@@ -160,22 +150,23 @@
                 <div class="space-y-6">
                     <div class="border-b pb-4">
                         <p class="text-base sm:text-lg font-semibold">2025.07.03</p>
-                        <p class="text-base">ギャラリーのキャプション機能を改善しました。</p>
+                        <p class="text-base">サイトにロゴを追加しました。</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- フッター -->
     <footer class="bg-amber-900 text-white">
         <div class="container mx-auto py-6 px-4 text-center">
-            <p class="font-accent text-lg">閑人房</p>
+            <div class="flex justify-center items-center space-x-2">
+                <img src="images/logo.png" alt="閑人房ロゴ" class="logo-footer">
+                <p class="font-accent text-lg">閑人房</p>
+            </div>
             <p class="text-sm mt-2">&copy; 2025 Kanjinbou. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- 画像拡大表示用のモーダル -->
     <div id="imageModal" class="image-modal">
       <span id="modalCloseButton" class="modal-close-button">&times;</span>
       <div class="modal-image-container">
@@ -184,7 +175,6 @@
       </div>
     </div>
 
-    <!-- JavaScript -->
     <script>
         // モバイルメニューのトグル
         const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -221,7 +211,6 @@
         closeButton.addEventListener('click', closeModal);
 
         modal.addEventListener('click', (e) => {
-            // 画像コンテナやその中身以外がクリックされた場合のみ閉じる
             if (!e.target.closest('.modal-image-container')) {
                 closeModal();
             }
@@ -229,6 +218,7 @@
     </script>
 </body>
 </html>
+
 
 
 
