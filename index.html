@@ -10,29 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        /* フォント設定 */
-        body {
-            font-family: 'Zen Maru Gothic', sans-serif; /* 全体を丸ゴシックに変更 */
-            color: #4a4a4a; /* 少し柔らかい黒 */
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        /* 見出しやアクセント用のフォント */
-        .font-accent {
-            font-family: 'Zen Kurenaido', sans-serif;
-        }
-        /* スムーズスクロール */
-        html {
-            scroll-behavior: smooth;
-        }
-        /* ヘッダーの背景色 */
-        header {
-            background-color: rgba(243, 244, 246, 0.8); /* 少し透過した白 */
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-    </style>
+    <!-- 外部CSSファイルの読み込み -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-50">
 
@@ -60,8 +39,8 @@
 
     <!-- メインコンテンツ -->
     <main>
-        <!-- メインビジュアル: 7.jpgを使用 -->
-        <section class="relative h-[60vh] md:h-[75vh] bg-cover bg-center" style="background-image: url('7.jpg');">
+        <!-- メインビジュアル -->
+        <section class="relative h-[60vh] md:h-[75vh] bg-cover bg-center" style="background-image: url('images/7.jpg');">
             <div class="absolute inset-0 bg-black bg-opacity-30"></div>
             <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
                 <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-4 font-accent">手から生まれる、温かい時間。</h2>
@@ -87,7 +66,7 @@
                         </p>
                     </div>
                     <div class="order-1 md:order-2">
-                        <!-- ここにオーナーの写真を設定します。例: owner.jpg -->
+                        <!-- オーナーの写真を設定します。例: images/owner.jpg -->
                         <img src="https://placehold.co/600x700/e0e0e0/4a4a4a?text=オーナーの写真" alt="オーナーの宇野修平" class="rounded-lg shadow-xl w-full h-auto object-cover max-h-[70vh]">
                     </div>
                 </div>
@@ -104,87 +83,50 @@
                 <!-- 革しごと -->
                 <div class="mb-16">
                     <h4 class="text-2xl sm:text-3xl font-semibold text-center mb-8 font-accent border-b-2 border-amber-800 pb-2 w-fit mx-auto">革しごと</h4>
-                    <!-- 画面のサイズに応じて列数が変わるように調整 -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <!-- 作品カード 1 -->
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="5.jpg" alt="レザーリュック" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                            <div class="p-6">
-                                <h5 class="text-xl font-bold mb-2">レザーリュック</h5>
-                                <p class="text-gray-600">ポケットが印象的なレザーリュック。</p>
-                            </div>
+                            <img src="images/5.jpg" alt="レザーリュック" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6"><h5 class="text-xl font-bold mb-2">レザーリュック</h5><p class="text-gray-600">ポケットが印象的なレザーリュック。</p></div>
                         </div>
-                        <!-- 作品カード 2 -->
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="8.jpg" alt="ショルダーバッグ" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                            <div class="p-6">
-                                <h5 class="text-xl font-bold mb-2">ショルダーバッグ</h5>
-                                <p class="text-gray-600">コロンとした形が可愛らしいバッグ。</p>
-                            </div>
+                            <img src="images/8.jpg" alt="ショルダーバッグ" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6"><h5 class="text-xl font-bold mb-2">ショルダーバッグ</h5><p class="text-gray-600">コロンとした形が可愛らしいバッグ。</p></div>
                         </div>
-                        <!-- 作品カード 3 -->
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="9.jpg" alt="ペンケース" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                            <div class="p-6">
-                                <h5 class="text-xl font-bold mb-2">ペンケース</h5>
-                                <p class="text-gray-600">鮮やかな色と丁寧なステッチが特徴。</p>
-                            </div>
+                            <img src="images/9.jpg" alt="ペンケース" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6"><h5 class="text-xl font-bold mb-2">ペンケース</h5><p class="text-gray-600">鮮やかな色と丁寧なステッチが特徴。</p></div>
                         </div>
-                        <!-- 作品カード 4 -->
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                             <img src="7.jpg" alt="チェーンバッグ" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                            <div class="p-6">
-                                <h5 class="text-xl font-bold mb-2">チェーンバッグ</h5>
-                                <p class="text-gray-600">パーティーにも使える上品なデザイン。</p>
-                            </div>
+                             <img src="images/7.jpg" alt="チェーンバッグ" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6"><h5 class="text-xl font-bold mb-2">チェーンバッグ</h5><p class="text-gray-600">パーティーにも使える上品なデザイン。</p></div>
                         </div>
-                        <!-- 作品カード 5 -->
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="6.jpg" alt="コインケース" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                            <div class="p-6">
-                                <h5 class="text-xl font-bold mb-2">コインケース</h5>
-                                <p class="text-gray-600">手に馴染むコンパクトなサイズ。</p>
-                            </div>
+                            <img src="images/6.jpg" alt="コインケース" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6"><h5 class="text-xl font-bold mb-2">コインケース</h5><p class="text-gray-600">手に馴染むコンパクトなサイズ。</p></div>
                         </div>
-                        <!-- 作品カード 6 -->
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="10.jpg" alt="メガネケース" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                            <div class="p-6">
-                                <h5 class="text-xl font-bold mb-2">メガネケース</h5>
-                                <p class="text-gray-600">大切なメガネを優しく保護します。</p>
-                            </div>
+                            <img src="images/10.jpg" alt="メガネケース" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6"><h5 class="text-xl font-bold mb-2">メガネケース</h5><p class="text-gray-600">大切なメガネを優しく保護します。</p></div>
                         </div>
                         <!-- 作品カード 7 (プレースホルダー) -->
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="https://placehold.co/600x600/a1887f/ffffff?text=革作品+7" alt="革作品 7" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                            <div class="p-6">
-                                <h5 class="text-xl font-bold mb-2">作品名 7</h5>
-                                <p class="text-gray-600">作品の説明をここに入力します。</p>
-                            </div>
+                            <img src="images/leather_7.jpg" alt="革作品 7" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6"><h5 class="text-xl font-bold mb-2">作品名 7</h5><p class="text-gray-600">作品の説明をここに入力します。</p></div>
                         </div>
                         <!-- 作品カード 8 (プレースホルダー) -->
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="https://placehold.co/600x600/8d6e63/ffffff?text=革作品+8" alt="革作品 8" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                            <div class="p-6">
-                                <h5 class="text-xl font-bold mb-2">作品名 8</h5>
-                                <p class="text-gray-600">作品の説明をここに入力します。</p>
-                            </div>
+                            <img src="images/leather_8.jpg" alt="革作品 8" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6"><h5 class="text-xl font-bold mb-2">作品名 8</h5><p class="text-gray-600">作品の説明をここに入力します。</p></div>
                         </div>
                         <!-- 作品カード 9 (プレースホルダー) -->
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="https://placehold.co/600x600/bcaaa4/ffffff?text=革作品+9" alt="革作品 9" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                            <div class="p-6">
-                                <h5 class="text-xl font-bold mb-2">作品名 9</h5>
-                                <p class="text-gray-600">作品の説明をここに入力します。</p>
-                            </div>
+                            <img src="images/leather_9.jpg" alt="革作品 9" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6"><h5 class="text-xl font-bold mb-2">作品名 9</h5><p class="text-gray-600">作品の説明をここに入力します。</p></div>
                         </div>
                         <!-- 作品カード 10 (プレースホルダー) -->
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="https://placehold.co/600x600/a1887f/ffffff?text=革作品+10" alt="革作品 10" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                            <div class="p-6">
-                                <h5 class="text-xl font-bold mb-2">作品名 10</h5>
-                                <p class="text-gray-600">作品の説明をここに入力します。</p>
-                            </div>
+                            <img src="images/leather_10.jpg" alt="革作品 10" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6"><h5 class="text-xl font-bold mb-2">作品名 10</h5><p class="text-gray-600">作品の説明をここに入力します。</p></div>
                         </div>
                     </div>
                 </div>
@@ -193,37 +135,21 @@
                 <div>
                     <h4 class="text-2xl sm:text-3xl font-semibold text-center mb-8 font-accent border-b-2 border-amber-800 pb-2 w-fit mx-auto">土あそび</h4>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <!-- 作品カード 1 -->
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="11.jpg" alt="コーヒーカップと角皿のセット" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                            <div class="p-6">
-                                <h5 class="text-xl font-bold mb-2">カップと角皿</h5>
-                                <p class="text-gray-600">渦模様が土の温かみを感じさせます。</p>
-                            </div>
+                            <img src="images/11.jpg" alt="コーヒーカップと角皿のセット" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6"><h5 class="text-xl font-bold mb-2">カップと角皿</h5><p class="text-gray-600">渦模様が土の温かみを感じさせます。</p></div>
                         </div>
-                        <!-- 作品カード 2 -->
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="13.jpg" alt="もみじ柄の湯呑み" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                            <div class="p-6">
-                                <h5 class="text-xl font-bold mb-2">もみじの湯呑み</h5>
-                                <p class="text-gray-600">もみじの葉をあしらった湯呑み。</p>
-                            </div>
+                            <img src="images/13.jpg" alt="もみじ柄の湯呑み" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6"><h5 class="text-xl font-bold mb-2">もみじの湯呑み</h5><p class="text-gray-600">もみじの葉をあしらった湯呑み。</p></div>
                         </div>
-                        <!-- 作品カード 3 -->
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="12.jpg" alt="筆跡が印象的な皿" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                            <div class="p-6">
-                                <h5 class="text-xl font-bold mb-2">筆跡の皿</h5>
-                                <p class="text-gray-600">大胆な筆遣いが印象的な一枚。</p>
-                            </div>
+                            <img src="images/12.jpg" alt="筆跡が印象的な皿" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6"><h5 class="text-xl font-bold mb-2">筆跡の皿</h5><p class="text-gray-600">大胆な筆遣いが印象的な一枚。</p></div>
                         </div>
-                        <!-- 作品カード 4 -->
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="14.jpg" alt="蓋付きの壺" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
-                            <div class="p-6">
-                                <h5 class="text-xl font-bold mb-2">蓋付きの壺</h5>
-                                <p class="text-gray-600">釉薬の流れが美しい景色を描きます。</p>
-                            </div>
+                            <img src="images/14.jpg" alt="蓋付きの壺" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6"><h5 class="text-xl font-bold mb-2">蓋付きの壺</h5><p class="text-gray-600">釉薬の流れが美しい景色を描きます。</p></div>
                         </div>
                     </div>
                 </div>
@@ -277,7 +203,3 @@
     </script>
 </body>
 </html>
-
-
-
-

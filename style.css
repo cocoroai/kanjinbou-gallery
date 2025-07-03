@@ -1,0 +1,24 @@
+/* フォント設定 */
+body {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    color: #4a4a4a;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 見出しやアクセント用のフォント */
+.font-accent {
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+
+/* スムーズスクロール */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ヘッダーの背景色 */
+header {
+    background-color: rgba(243, 244, 246, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
