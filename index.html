@@ -3,221 +3,349 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>閑人房 | 宇野修平 作品集</title>
+    <title>ココロAI - あなたの毎日に、優しいAIの魔法を。</title>
+    
+    <!-- 主要なファビコン設定 -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    
+    <!-- その他のメタタグ (テーマカラーなど、manifest.jsonの内容と重複する場合あり) -->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Zen Old Mincho for headings, Noto Sans JP for body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Old+Mincho:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="style.css">
-</head>
-<body class="bg-gray-50">
 
-    <header class="sticky top-0 z-50 w-full">
-        <div class="container mx-auto flex justify-between items-center p-4">
-            <a href="#" class="flex items-center space-x-3">
-                <img src="images/logo.png" alt="閑人房ロゴ" class="logo-header">
-                <span class="text-2xl font-bold font-accent text-amber-800">閑人房</span>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header -->
+    <header class="sticky top-0 bg-white/80 backdrop-blur-md z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- ロゴ画像 -->
+            <a href="#" class="flex items-center">
+                 <img src="images/cocoroai_logo.png" alt="ココロAI ロゴ" class="h-12 w-auto">
             </a>
-            <nav class="hidden md:flex space-x-8 text-lg">
-                <a href="#about" class="hover:text-amber-700 transition">閑人房について</a>
-                <a href="#works" class="hover:text-amber-700 transition">作品紹介</a>
-                <a href="#info" class="hover:text-amber-700 transition">お知らせ</a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-cyan-600 transition-colors">私たちについて</a>
+                <a href="#services" class="text-gray-600 hover:text-cyan-600 transition-colors">サービス</a>
+                <a href="#works" class="text-gray-600 hover:text-cyan-600 transition-colors">実績</a>
+                <a href="#news" class="text-gray-600 hover:text-cyan-600 transition-colors">ニュース</a>
+                <a href="#company" class="text-gray-600 hover:text-cyan-600 transition-colors">会社概要</a>
+                <a href="#contact" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded-full transition-all duration-300 shadow-md hover:shadow-lg">お問い合わせ</a>
             </nav>
-            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-800">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-600 hover:bg-gray-100">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
             </button>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden">
-            <a href="#about" class="block py-2 px-4 text-sm hover:bg-amber-50">閑人房について</a>
-            <a href="#works" class="block py-2 px-4 text-sm hover:bg-amber-50">作品紹介</a>
-            <a href="#info" class="block py-2 px-4 text-sm hover:bg-amber-50">お知らせ</a>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-2">
+            <a href="#about" class="block text-gray-600 hover:text-cyan-600 transition-colors py-2">私たちについて</a>
+            <a href="#services" class="block text-gray-600 hover:text-cyan-600 transition-colors py-2">サービス</a>
+            <a href="#works" class="block text-gray-600 hover:text-cyan-600 transition-colors py-2">実績</a>
+            <a href="#news" class="block text-gray-600 hover:text-cyan-600 transition-colors py-2">ニュース</a>
+            <a href="#company" class="block text-gray-600 hover:text-cyan-600 transition-colors py-2">会社概要</a>
+            <a href="#contact" class="block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded-full transition-all duration-300 text-center mt-2">お問い合わせ</a>
         </div>
     </header>
 
+    <!-- Main Content -->
     <main>
-        <section class="relative h-[60vh] md:h-[75vh] bg-cover bg-center" style="background-image: url('images/main-visual.jpg');">
-            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
-            <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-4 font-accent">手から生まれる、温かい時間。</h2>
-                <p class="text-base sm:text-lg md:text-xl max-w-2xl">閑人房は、宇野修平が手がける<br class="hidden sm:block">革しごとと土あそびの小さなアトリエです。</p>
+        <!-- Hero Section -->
+        <section class="relative text-center py-20 md:py-32 bg-white overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full bg-grid-gray-100/50 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-4 leading-tight fade-in-up">
+                    あなたの毎日に、<br class="md:hidden">優しいAIの<span class="text-gradient">魔法</span>を。
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8 fade-in-up delay-100">
+                    ココロAIは、最先端のAI技術と「心」を繋ぎ、<br>あなたの日常をより豊かで、健やかで、楽しいものに変えるお手伝いをします。
+                </p>
+                <a href="#services" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 fade-in-up delay-200">
+                    サービスを見る
+                </a>
             </div>
         </section>
 
-        <section id="about" class="py-12 md:py-20 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 md:px-12">
-                <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-                    <div class="order-2 md:order-1">
-                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-amber-900 font-accent">閑人房について</h3>
-                        <p class="text-base sm:text-lg mb-4 leading-relaxed">
-                            オーナーの宇野修平。<br>
-                            長年の勤めを終え、第二の人生で出会ったのが、ものづくりの世界でした。
-                        </p>
-                        <p class="text-base sm:text-lg mb-4 leading-relaxed">
-                            若い頃から好きだった革の匂い、土の感触。時間を忘れ、ただ黙々と手と向き合う。そんな「閑（ひま）な人」の時間を楽しむ房（へや）が、この「閑人房」です。
-                        </p>
-                        <p class="text-base sm:text-lg leading-relaxed">
-                            ひとつひとつ、ゆっくりと。使う人の日々にそっと寄り添うような、温かみのある作品をお届けできれば幸いです。
-                        </p>
-                    </div>
-                    <div class="order-1 md:order-2">
-                        <img src="images/owner-uno.jpg" alt="オーナーの宇野修平" class="rounded-lg shadow-xl w-full h-auto object-cover max-h-[70vh]">
-                    </div>
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-8 fade-in-up">テクノロジーは、もっと人の心に寄り添える。</h2>
+                <div class="max-w-4xl mx-auto text-left md:text-center text-gray-700 leading-relaxed space-y-6 fade-in-up delay-200">
+                    <p>
+                        私たちは、テクノロジーが人の感情や心の状態にも寄り添える時代を目指しています。AIは単なる自動化や効率化のツールではなく、日常の中で人の「こころ」に作用する、新しい価値の担い手であると考えています。
+                    </p>
+                    <p>
+                        ココロAIは、テクノロジーに“やさしさ”という視点を加えることで、人とAIのより自然で信頼できる関係性を築くことを使命としています。私たちの開発するAIは、直感的で、親しみやすく、そしてなにより人にやさしい。
+                    </p>
+                    <p>
+                        AIの力を最大限に活かしつつ、お客様が安心してご利用いただけるよう、私たちは常に「AIを正しく安全に使う」ことを追求し、倫理的な開発と運用に努めています。
+                    </p>
+                    <p>
+                        日々の生活の中に、静かにポジティブな変化をもたらす存在です。“人のこころに届くAI”を通じて、これからの社会に新しい選択肢と価値を提供していきます。
+                    </p>
                 </div>
             </div>
         </section>
 
-        <section id="works" class="py-12 md:py-20">
-            <div class="container mx-auto px-4 sm:px-6 md:px-12">
+        <!-- Services Section -->
+        <section id="services" class="py-20">
+            <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h3 class="text-3xl sm:text-4xl font-bold text-amber-900 font-accent">作品紹介</h3>
+                    <h2 class="text-3xl font-bold mb-2 fade-in-up">私たちのサービス</h2>
+                    <p class="text-gray-600 fade-in-up delay-100">あなたの毎日をサポートする、多彩なAIサービス</p>
                 </div>
-
-                <div class="mb-16">
-                    <h4 class="text-2xl sm:text-3xl font-semibold text-center mb-8 font-accent border-b-2 border-amber-800 pb-2 w-fit mx-auto">革しごと</h4>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="images/leather-rucksack.jpg" alt="レザーリュック" class="gallery-image w-full h-64 object-cover">
-                            <div class="p-6"><h5 class="text-xl font-bold mb-2">レザーリュック</h5><p class="text-gray-600">ポケットが印象的なレザーリュック。</p></div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1: Bento Planner -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center fade-in-up delay-200">
+                        <div class="bg-rose-100 p-4 rounded-full mb-4">
+                            <img src="images/bento_planner_icon.png" alt="Bento Planner Icon" class="h-8 w-auto">
                         </div>
-                        <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="images/leather-shoulderbag.jpg" alt="ショルダーバッグ" class="gallery-image w-full h-64 object-cover">
-                            <div class="p-6"><h5 class="text-xl font-bold mb-2">ショルダーバッグ</h5><p class="text-gray-600">コロンとした形が可愛らしいバッグ。</p></div>
-                        </div>
-                        <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="images/leather-pencase.jpg" alt="ペンケース" class="gallery-image w-full h-64 object-cover">
-                            <div class="p-6"><h5 class="text-xl font-bold mb-2">ペンケース</h5><p class="text-gray-600">鮮やかな色と丁寧なステッチが特徴。</p></div>
-                        </div>
-                        <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                             <img src="images/leather-clutch.jpg" alt="クラッチバッグ" class="gallery-image w-full h-64 object-cover">
-                            <div class="p-6"><h5 class="text-xl font-bold mb-2">クラッチバッグ</h5><p class="text-gray-600">パーティーにも使える上品なデザイン。</p></div>
-                        </div>
-                        <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="images/leather-coinpurse.jpg" alt="コインケース" class="gallery-image w-full h-64 object-cover">
-                            <div class="p-6"><h5 class="text-xl font-bold mb-2">コインケース</h5><p class="text-gray-600">手に馴染むコンパクトなサイズ。</p></div>
-                        </div>
-                        <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="images/leather-wallet.jpg" alt="財布" class="gallery-image w-full h-64 object-cover">
-                            <div class="p-6"><h5 class="text-xl font-bold mb-2">財布</h5><p class="text-gray-600">鮮やかなオレンジ色の二つ折り財布。</p></div>
-                        </div>
-                        <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="images/leather-bizbag-shoulder.jpg" alt="肩掛けビジネスバッグ" class="gallery-image w-full h-64 object-cover">
-                            <div class="p-6"><h5 class="text-xl font-bold mb-2">肩掛けビジネスバッグ</h5><p class="text-gray-600">A4サイズも収納可能なビジネスバッグ。</p></div>
-                        </div>
-                        <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="images/leather-rucksack-multi.jpg" alt="多機能リュック" class="gallery-image w-full h-64 object-cover">
-                            <div class="p-6"><h5 class="text-xl font-bold mb-2">多機能リュック</h5><p class="text-gray-600">収納力抜群の多機能なリュックです。</p></div>
-                        </div>
-                        <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="images/leather-pouch-red.jpg" alt="赤いポーチ" class="gallery-image w-full h-64 object-cover">
-                            <div class="p-6"><h5 class="text-xl font-bold mb-2">赤いポーチ</h5><p class="text-gray-600">小物入れに最適な赤いレザーポーチ。</p></div>
-                        </div>
-                        <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="images/leather-bizbag.jpg" alt="レザーバッグ" class="gallery-image w-full h-64 object-cover">
-                            <div class="p-6"><h5 class="text-xl font-bold mb-2">レザーバッグ</h5><p class="text-gray-600">ビジネスにも使える上品なバッグです。</p></div>
-                        </div>
+                        <h3 class="text-xl font-bold mb-2">Bento Planner</h3>
+                        <p class="text-gray-600 flex-grow">毎日の献立作りをAIがサポート。栄養バランスも彩りも考えたお弁当プランナーです。</p>
+                        <a href="https://bento.cocoroai.co.jp" target="_blank" class="mt-4 text-cyan-600 font-semibold hover:underline">詳しく見る &rarr;</a>
                     </div>
-                </div>
+                    
+                    <!-- Service Card 2: 美肌コンシェルジュ -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center fade-in-up delay-400">
+                        <div class="bg-pink-100 p-4 rounded-full mb-4">
+                            <img src="images/bihada_icon.png" alt="美肌コンシェルジュ Icon" class="h-8 w-auto">
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">美肌コンシェルジュ</h3>
+                        <p class="text-gray-600 flex-grow">AIがあなたの肌質を分析し、最適なスキンケア方法をアドバイス。さらに、お客様の肌状態やご希望に応じて美容医療の提案も行います。</p>
+                        <a href="https://bihadaconcierge.cocoroai.co.jp/" target="_blank" class="mt-4 text-cyan-600 font-semibold hover:underline">詳しく見る &rarr;</a>
+                    </div>
 
-                <div>
-                    <h4 class="text-2xl sm:text-3xl font-semibold text-center mb-8 font-accent border-b-2 border-amber-800 pb-2 w-fit mx-auto">土あそび</h4>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="images/ceramic-cup-saucer.jpg" alt="コーヒーカップと角皿のセット" class="gallery-image w-full h-64 object-cover">
-                            <div class="p-6"><h5 class="text-xl font-bold mb-2">カップと角皿</h5><p class="text-gray-600">渦模様が土の温かみを感じさせます。</p></div>
+                    <!-- Service Card 3: 癒しのクモちゃん -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center fade-in-up delay-200">
+                        <div class="bg-yellow-100 p-4 rounded-full mb-4">
+                            <img src="images/kumochan_icon.png" alt="癒しのクモちゃん Icon" class="h-8 w-auto">
                         </div>
-                        <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="images/ceramic-maple-cups.jpg" alt="もみじ柄の湯呑み" class="gallery-image w-full h-64 object-cover">
-                            <div class="p-6"><h5 class="text-xl font-bold mb-2">もみじの湯呑み</h5><p class="text-gray-600">もみじの葉をあしらった湯呑み。</p></div>
+                        <h3 class="text-xl font-bold mb-2">癒しのクモちゃん</h3>
+                        <p class="text-gray-600 flex-grow">忙しい毎日に寄り添う癒やしアプリ。タップするたび、クモちゃんが心温まるメッセージを紡ぎ出し、深い安らぎと前向きな気持ちを届けます。</p>
+                         <a href="https://apps.apple.com/us/app/%E7%99%92%E3%81%97%E3%81%AE%E3%82%AF%E3%83%A2%E3%81%AE%E3%81%A1%E3%82%83%E3%82%93/id6746834418?platform=iphone" target="_blank" class="mt-4 text-cyan-600 font-semibold hover:underline">App Storeで見る &rarr;</a>
+                    </div>
+                    
+                    <!-- Service Card 4: 癒しの白衣ちゃん -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center fade-in-up delay-300">
+                        <div class="bg-blue-100 p-4 rounded-full mb-4">
+                            <img src="images/nursechan_icon.png" alt="癒しの白衣ちゃん Icon" class="h-8 w-auto">
                         </div>
-                        <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="images/ceramic-plate.jpg" alt="筆跡が印象的な皿" class="gallery-image w-full h-64 object-cover">
-                            <div class="p-6"><h5 class="text-xl font-bold mb-2">筆跡の皿</h5><p class="text-gray-600">大胆な筆遣いが印象的な一枚。</p></div>
+                        <h3 class="text-xl font-bold mb-2">癒しの白衣ちゃん<br><span class="text-base font-normal">for 医療従事者の方</span></h3>
+                        <p class="text-gray-600 flex-grow">白衣の天使があなたを優しくサポート。疲れた心に安らぎのひとときを。</p>
+                        <a href="https://iyashinurse.cocoroai.co.jp/" target="_blank" class="mt-4 text-cyan-600 font-semibold hover:underline">詳しく見る &rarr;</a>
+                    </div>
+
+                    <!-- Service Card 5: 癒しの三角コーンちゃん -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center fade-in-up delay-200">
+                        <div class="bg-orange-100 p-4 rounded-full mb-4">
+                            <img src="images/traffic_cone_icon.png" alt="癒しの三角コーンちゃん Icon" class="h-8 w-auto">
                         </div>
-                        <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
-                            <img src="images/ceramic-pot.jpg" alt="蓋付きの壺" class="gallery-image w-full h-64 object-cover">
-                            <div class="p-6"><h5 class="text-xl font-bold mb-2">蓋付きの壺</h5><p class="text-gray-600">釉薬の流れが美しい景色を描きます。</p></div>
+                        <h3 class="text-xl font-bold mb-2">癒しの三角コーンちゃん<br><span class="text-base font-normal">for 現場でお仕事される方</span></h3>
+                        <p class="text-gray-600 flex-grow">現場で働く方々の心に寄り添い、日々の疲れを癒やすAIアプリです。</p>
+                        <a href="https://genba.cocoroai.co.jp/" target="_blank" class="mt-4 text-cyan-600 font-semibold hover:underline">詳しく見る &rarr;</a>
+                    </div>
+
+                    <!-- Service Card 6: 癒しのチョークちゃん -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center fade-in-up delay-300">
+                        <div class="bg-gray-200 p-4 rounded-full mb-4">
+                            <img src="images/chalk_icon.png" alt="癒しのチョークちゃん Icon" class="h-8 w-auto">
                         </div>
+                        <h3 class="text-xl font-bold mb-2">癒しのチョークちゃん<br><span class="text-base font-normal">for 学校の先生</span></h3>
+                        <p class="text-gray-600 flex-grow">学校の先生方をサポート。チョークのメッセージが教壇に立つあなたの心を癒やします。</p>
+                        <a href="https://iyashiteacher.cocoroai.co.jp/" target="_blank" class="mt-4 text-cyan-600 font-semibold hover:underline">詳しく見る &rarr;</a>
+                    </div>
+
+                    <!-- Service Card 7: 毎日のアファメーション -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center fade-in-up delay-400">
+                        <div class="bg-emerald-100 p-4 rounded-full mb-4">
+                            <img src="images/affirmation_icon.png" alt="毎日のアファメーション Icon" class="h-8 w-auto">
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">毎日のアファメーション</h3>
+                        <p class="text-gray-600 flex-grow">AIがあなたにぴったりの言葉を届けます。自己肯定感を高め、理想の自分へ。</p>
+                        <a href="https://affirmation.cocoroai.co.jp/" target="_blank" class="mt-4 text-cyan-600 font-semibold hover:underline">詳しく見る &rarr;</a>
+                    </div>
+                    
+                    <!-- Service Card 8: 占い -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center fade-in-up delay-300">
+                        <div class="bg-purple-100 p-4 rounded-full mb-4">
+                            <img src="images/fortune_icon.png" alt="ココロAI 占い Icon" class="h-8 w-auto">
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">ココロAI 占い</h3>
+                        <p class="text-gray-600 flex-grow">あなたの運勢をAIが占います。毎日をポジティブに過ごすためのヒントをどうぞ。</p>
+                        <a href="https://fortune.cocoroai.co.jp/" target="_blank" class="mt-4 text-cyan-600 font-semibold hover:underline">詳しく見る &rarr;</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="info" class="py-12 md:py-20 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 md:px-12 max-w-3xl">
+        <!-- Works/Case Studies Section -->
+        <section id="works" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h3 class="text-3xl sm:text-4xl font-bold text-amber-900 font-accent">お知らせ</h3>
+                    <h2 class="text-3xl font-bold mb-2 fade-in-up">実績 / Works</h2>
+                    <p class="text-gray-600 fade-in-up delay-100">ココロAIが手掛けてきたプロジェクトの一部をご紹介します。</p>
                 </div>
-                <div class="space-y-6">
-                    <div class="border-b pb-4">
-                        <p class="text-base sm:text-lg font-semibold">2025.07.03</p>
-                        <p class="text-base">サイトに作品写真を追加しました。</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1: 漢字防ギャラリーサイト -->
+                    <div class="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center fade-in-up delay-200">
+                        <div class="bg-blue-100 p-4 rounded-full mb-4">
+                            <!-- アイコンは仮のプレースホルダーです。適切なアイコンに置き換えてください -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">漢字防ギャラリーサイト</h3>
+                        <p class="text-gray-600 flex-grow">小規模ながらも、特定のニーズに応えるウェブギャラリーサイトを開発しました。シンプルながらも使いやすさを追求し、コンテンツの魅力を最大限に引き出すデザインを実現しています。</p>
+                        <a href="https://cocoroai.github.io/kanjinbou-gallery/" target="_blank" class="mt-4 text-cyan-600 font-semibold hover:underline">サイトを見る &rarr;</a>
+                    </div>
+                    
+                    <!-- 他の実績があればここに追加 -->
+                    <!-- <div class="bg-gray-50 p-8 rounded-2xl shadow-lg ...">...</div> -->
+
+                </div>
+            </div>
+        </section>
+
+        <!-- News/Announcements Section -->
+        <section id="news" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="text-center text-3xl font-bold mb-10 fade-in-up">ニュース / お知らせ</h2>
+                <div class="bg-white rounded-2xl shadow-lg p-8 md:p-10 fade-in-up delay-100">
+                    <ul class="space-y-4">
+                        <li class="border-b border-gray-200 pb-4">
+                            <a href="https://bihadaconcierge.cocoroai.co.jp" target="_blank" class="block hover:opacity-80 transition-opacity">
+                                <time datetime="2025-06-21" class="text-sm text-gray-500">2025.06.21</time>
+                                <p class="text-gray-800 font-medium md:text-lg">「美肌コンシェルジュ」がバージョンアップ！相談機能充実で自分に合ったお手入れやおすすめ美容医療の提案まで、さらにパーソナルな美肌ケアをサポートします！</p>
+                            </a>
+                        </li>
+                        <li class="border-b border-gray-200 pb-4">
+                            <a href="https://bento.cocoroai.co.jp" target="_blank" class="block hover:opacity-80 transition-opacity">
+                                <time datetime="2025-06-20" class="text-sm text-gray-500">2025.06.20</time>
+                                <p class="text-gray-800 font-medium md:text-lg">「Bento Planner」がバージョンアップ！毎日のお弁当作りが楽しくなる気分で選べる献立がさらに充実！食べたいおかずのイメージから美味しいレシピをご紹介します！</p>
+                            </a>
+                        </li>
+                        <li class="border-b border-gray-200 pb-4 last:border-b-0 last:pb-0">
+                            <a href="/" class="block hover:opacity-80 transition-opacity">
+                                <time datetime="2025-06-20" class="text-sm text-gray-500">2025.06.20</time>
+                                <p class="text-gray-800 font-medium md:text-lg">ココロAI合同会社のウェブサイトをリニューアルしました。</p>
+                            </a>
+                        </li>
+                        <li class="border-b border-gray-200 pb-4 last:border-b-0 last:pb-0">
+                            <a href="https://apps.apple.com/us/app/%E7%99%92%E3%81%97%E3%81%AE%E3%82%AF%E3%83%A2%E3%81%AE%E3%81%A1%E3%82%83%E3%82%93/id6746834418?platform=iphone" target="_blank" class="block hover:opacity-80 transition-opacity">
+                                <time datetime="2025-06-01" class="text-sm text-gray-500">2025.06.01</time>
+                                <p class="text-gray-800 font-medium md:text-lg">「癒しのクモちゃん」iOS版をリリースしました。</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="text-center mt-8">
+                        <a href="#" class="text-cyan-600 font-semibold hover:underline">ニュース一覧を見る &rarr;</a>
                     </div>
                 </div>
             </div>
         </section>
+
+         <!-- Company Section -->
+        <section id="company" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold mb-4 fade-in-up">会社概要</h2>
+                    <p class="text-lg text-gray-700 fade-in-up delay-100">AIのチカラで、毎日の暮らしとビジネスに“ココロの余裕”を届ける</p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-8 md:p-10 fade-in-up delay-200">
+                    <div class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+                            <p class="font-semibold text-gray-500">会社名</p>
+                            <p class="md:col-span-2">ココロＡＩ合同会社</p>
+                        </div>
+                        <hr>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+                            <p class="font-semibold text-gray-500">設立</p>
+                            <p class="md:col-span-2">2025年2月25日</p>
+                        </div>
+                         <hr>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+                            <p class="font-semibold text-gray-500">事業内容</p>
+                            <p class="md:col-span-2">AIサービス企画・開発、<br>YouTubeコンテンツ制作支援、<br>ホームページ制作・運用支援、<br>そしてお客様のアイデアを形にするオーダーメイドのWebサイト・アプリ開発 etc.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-4 fade-in-up">お問い合わせ</h2>
+                <p class="text-gray-600 mb-8 max-w-2xl mx-auto fade-in-up delay-100">
+                    サービスに関するご質問、協業のご相談など、お気軽にお問い合わせください。
+                </p>
+                <div class="max-w-3xl mx-auto fade-in-up delay-200">
+                     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe03qOZPCHUF8qnQfY42Kx5Y-Axg1rbl7Q-6e1Er2zXe1bbng/viewform?embedded=true" width="100%" height="833" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer class="bg-amber-900 text-white">
-        <div class="container mx-auto py-6 px-4 text-center">
-            <div class="flex justify-center items-center space-x-2">
-                <img src="images/logo.png" alt="閑人房ロゴ" class="logo-footer">
-                <p class="font-accent text-lg">閑人房</p>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                 <a href="#" class="flex items-center space-x-2 mb-4 md:mb-0">
+                     <img src="images/cocoroai_logo.png" alt="ココロAI ロゴアイコン" class="h-8 w-auto">
+                </a>
+                <div class="text-center md:text-right">
+                    <nav class="space-x-6 mb-4">
+                        <a href="#about" class="text-gray-300 hover:text-white transition-colors">私たちについて</a>
+                        <a href="#services" class="text-gray-300 hover:text-white transition-colors">サービス</a>
+                        <a href="#contact" class="text-gray-300 hover:text-white transition-colors">お問い合わせ</a>
+                        <a href="https://sites.google.com/cocoroai.co.jp/privacy-policy/%E3%83%9B%E3%83%BC%E3%83%A0" target="_blank" class="text-gray-300 hover:text-white transition-colors">プライバシーポリシー</a>
+                    </nav>
+                    <p class="text-sm text-gray-400">&copy; 2025 ココロＡＩ合同会社. All Rights Reserved.</p>
+                </div>
             </div>
-            <p class="text-sm mt-2">&copy; 2025 Kanjinbou. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <div id="imageModal" class="image-modal">
-      <span id="modalCloseButton" class="modal-close-button">&times;</span>
-      <div class="modal-image-container">
-        <img class="image-modal-content" id="modalImage">
-        <div id="modalCaption"></div>
-      </div>
-    </div>
-
     <script>
-        // モバイルメニューのトグル
+        // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-        const menuLinks = mobileMenu.getElementsByTagName('a');
-        for (let i = 0; i < menuLinks.length; i++) {
-            menuLinks[i].addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
+        
+        // Add fade-in-up animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                }
             });
-        }
+        }, { threshold: 0.1 });
 
-        // --- ここから画像拡大表示のスクリプト ---
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('modalImage');
-        const modalCaption = document.getElementById('modalCaption');
-        const closeButton = document.getElementById('modalCloseButton');
-
-        document.querySelectorAll('.gallery-image').forEach(image => {
-            image.addEventListener('click', () => {
-                modal.style.display = 'flex';
-                modalImg.src = image.src;
-                const description = image.nextElementSibling.querySelector('p').innerText;
-                modalCaption.innerText = description;
-            });
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            observer.observe(el);
         });
 
-        const closeModal = () => {
-            modal.style.display = 'none';
-        }
-
-        closeButton.addEventListener('click', closeModal);
-
-        modal.addEventListener('click', (e) => {
-            if (!e.target.closest('.modal-image-container')) {
-                closeModal();
-            }
-        });
     </script>
 </body>
 </html>
+
 
 
 
